@@ -1,13 +1,13 @@
 # Makefile N4
-	
-complex: mycomplex.o testcmp.o
-	g++ -o complex mycomplex.o testcmp.o
-	
-mycomplex.o: mycomplex.cpp mycomplex.h
-	g++ -c mycomplex.cpp
-	
-testcmp.o: testcmp.cpp
-	g++ -c testcmp.cpp
-	
-clean:
+
+complex : bin / obj / mycomplex.o bin / obj / testcmp.o
+	g++ - o bin / complex mycomplex.o testcmp.o
+
+bin / obj / mycomplex.o : mycomplex.cpp mycomplex.h
+	g++ - o bin / obj / mycomplex.o - c mycomplex.cpp
+
+bin / obj / testcmp.o : testcmp.cpp
+	g++ - o testcmp.o - c testcmp.cpp
+
+clean :
 	del /Q /S *.o complex
