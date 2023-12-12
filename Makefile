@@ -1,4 +1,4 @@
-# Makefile NX
+# Makefile N4
 
 complex: bin/obj/ mycomplex.o bin/obj/ testcmp.o
 	g++ -o bin/ complex mycomplex.o testcmp.o
